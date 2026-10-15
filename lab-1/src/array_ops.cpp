@@ -25,7 +25,7 @@ int* array_resize(int* arr, std::size_t size, std::size_t& capacity, std::size_t
     return new_arr;
 }
 
-int* array_insert(int* arr, std::size_t& size, std::size_t capacity, std::size_t pos, int value) {
+void array_insert(int* arr, std::size_t& size, std::size_t capacity, std::size_t pos, int value) {
     if (pos > size) throw std::out_of_range("pos is out of range; valid range is [0, size]");
     if (capacity == size) throw std::length_error("capacity is exhausted");
 
@@ -34,19 +34,15 @@ int* array_insert(int* arr, std::size_t& size, std::size_t capacity, std::size_t
     }
     arr[pos] = value;
     size++;
-
-    return arr;
 }
 
-int* array_remove(int* arr, std::size_t& size, std::size_t pos) {
+void array_remove(int* arr, std::size_t& size, std::size_t pos) {
     if (pos >= size) throw std::out_of_range("pos is out of range; valid range is [0, size]");
     
     for (std::size_t i = pos; i < size; i++) {
         arr[i] = arr[i+1];
     }
     size--;
-
-    return arr;
 }
 
 void array_print(const int* arr, std::size_t size) {
