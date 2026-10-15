@@ -33,6 +33,8 @@ int main() {
             continue;
         }
 
+        clear_input();
+
         if (choice == 0) {
             array_delete(arr);
             size = 0;
@@ -89,6 +91,7 @@ int main() {
                 std::cout << "\033[31mНеверный ввод: Должно быть 0 <= pos <= size\033[0m\n";
                 break;
             }
+            clear_input();
 
             std::cout << "$ Введите значение: ";
             int value;
