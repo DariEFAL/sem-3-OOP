@@ -26,8 +26,7 @@ int* array_insert(int* arr, std::size_t& size, std::size_t pos, int value); // �
 int* array_remove(int* arr, std::size_t& size, std::size_t pos); // удаление
 void array_print(const int* arr, std::size_t size);
 // Ваш вариант задания, например:
-bool array_binary_search(const int* arr, std::size_t size, int target, std::size_t&
-out_index);
+bool array_binary_search(const int* arr, std::size_t size, int target, std::size_t& out_index);
 ```
 ## Подробное задание для варианта 2
 |№|Семейство|Сортировка/поиск|Обязательные функции|Алгоритм|
@@ -49,3 +48,13 @@ array_reverse(int* arr, size_t size) — развернуть массив на 
 7. Алгоритм варианта 
 0. Выход
 
+## Запуск
+```
+cd lab-1
+mkdir -p build
+cd build
+cmake ..
+cmake --build .
+cd ..
+./build/program
+```
