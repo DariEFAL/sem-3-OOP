@@ -56,5 +56,9 @@ cd build
 cmake ..
 cmake --build .
 cd ..
+
 ./build/program
+
+./build/tests
+./tests --gtest_filter=ArrayResize.*
 ```

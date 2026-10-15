@@ -34,7 +34,8 @@ FetchContent_MakeAvailable(googletest)
 enable_testing()
 
 add_executable(tests
-    tests/test.cpp
+    tests/tests_func.cpp
+    tests/tests_array_ops.cpp
 )
 target_link_libraries(tests PRIVATE
     lab1_lib
